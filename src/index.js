@@ -59,6 +59,60 @@ client.on ('interactionCreate', async (i) => {
             console.error(err)
         }
     }
+
+    if (i.commandName === 'prev') {
+        try {
+            getPrev()
+            .then(async (el) => {
+                const titleEmbed = new EmbedBuilder()
+                .setColor(0x009c3f)             
+                .setTitle('**Previous Stock:**')
+
+                const embedData = 
+                    el.map(el => {
+                        return new EmbedBuilder()
+                        .setColor(0x009c3f)
+                        .setTitle(`${el.name}`)
+                        .setDescription(`$${el.price}`)
+                        .setThumbnail(imageSelect(`${el.name}`))
+                    })
+                
+
+                i.channel.send({embeds: [titleEmbed]})
+                i.channel.send({embeds: embedData})
+            })
+            
+        } catch (err) {
+            console.error(err)
+        }
+    }
+
+    if (i.commandName === 'beforeprev') {
+        try {
+            getBeforePrev()
+            .then(async (el) => {
+                const titleEmbed = new EmbedBuilder()
+                .setColor(0x009c3f)             
+                .setTitle('**Before Previous Stock:**')
+
+                const embedData = 
+                    el.map(el => {
+                        return new EmbedBuilder()
+                        .setColor(0x009c3f)
+                        .setTitle(`${el.name}`)
+                        .setDescription(`$${el.price}`)
+                        .setThumbnail(imageSelect(`${el.name}`))
+                    })
+                
+
+                i.channel.send({embeds: [titleEmbed]})
+                i.channel.send({embeds: embedData})
+            })
+            
+        } catch (err) {
+            console.error(err)
+        }
+    }
     
     
 })

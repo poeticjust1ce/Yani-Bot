@@ -13,6 +13,14 @@ const commands = [
     name: 'stock',
     description: `Checks blox fruit current stock`,
   },
+  {
+    name: 'prev',
+    description: `Checks blox fruit previous stock`,
+  },
+  {
+    name: 'beforeprev',
+    description: `Checks blox fruit before previous stock`,
+  },
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);

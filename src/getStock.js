@@ -13,34 +13,14 @@ export const getPrev = async () => {
     const res = await fetch(`${api}prev`)
     const data = await res.json()
 
-    const arr = []
-
-    data[0].map(el => {
-        arr.push({
-            name: el.name,
-            price: el.price,
-            img: imageSelect(el.name)
-        })
-    })
-
-    console.log(arr)
+    return data
 } 
 
 export const getBeforePrev = async () => {
     const res = await fetch(`${api}beforeprev`)
     const data = await res.json()
     
-    const arr = []
-
-    data[0].map(el => {
-        arr.push({
-            name: el.name,
-            price: el.price,
-            img: imageSelect(el.name)
-        })
-    })
-
-    console.log(arr)
+    return data
 } 
 
 export const getTimeLeft = async () => {

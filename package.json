@@ -1,7 +1,6 @@
 {
   "name": "discord-bot-test",
   "version": "1.0.0",
-  "description": "",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -14,5 +13,14 @@
   "dependencies": {
     "discord.js": "^14.7.1",
     "dotenv": "^16.0.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poeticjust1ce/Yani-Bot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/poeticjust1ce/Yani-Bot/issues"
+  },
+  "homepage": "https://github.com/poeticjust1ce/Yani-Bot#readme",
+  "description": ""
 }
